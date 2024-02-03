@@ -40,10 +40,10 @@ fi
 
 rm -f "${MY_DIR}/dtbs/00_kernel"
 find "${MY_DIR}/dtbs" -type f -name "*.dtb" -delete
-rm -f "${MY_DIR}/dtbs/dtbo.img"
+rm -f "${MY_DIR}/dtbo.img"
 
 # Copy
-cp -f "${DUMP}/aosp-device-tree/prebuilts/dtbo.img" "${MY_DIR}/dtbs/dtbo.img"
+cp -f "${DUMP}/aosp-device-tree/prebuilts/dtbo.img" "${MY_DIR}/dtbo.img"
 
 mkdir "${MY_DIR}/_temp"
 curl -L "https://raw.githubusercontent.com/PabloCastellano/extract-dtb/master/extract_dtb/extract_dtb.py" > ${MY_DIR}/_temp/extract_dtb.py
